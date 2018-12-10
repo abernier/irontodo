@@ -1,4 +1,4 @@
-## dev
+## INSTALL
 
 Requirements:
 - `mongod`

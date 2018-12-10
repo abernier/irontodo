@@ -519,12 +519,6 @@ class App extends React.Component {
             )
           }} />
 
-          <Route path="/id" exact={true} render={() => (
-            <>
-              id
-            </>
-          )}/>
-
           <Snackbar />
 
         </div>
