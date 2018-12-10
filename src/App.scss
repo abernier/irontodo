@@ -1,0 +1,76 @@
+$mdc-theme-primary: #2d354c;
+$mdc-theme-secondary: #32c3ff;
+$mdc-theme-background: #32c3ff;
+
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/list/mdc-list";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/fab/mdc-fab";
+@import "@material/textfield/mdc-text-field";
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+
+.App {
+  font-family:Roboto, sans-serif;
+}
+
+.Auth {
+  padding:20px;
+
+  .mdc-text-field {
+    margin-bottom:1em; width:100%;
+
+    $color:white;
+    @include mdc-text-field-ink-color($color);
+    @include mdc-text-field-label-color($color);
+    @include mdc-text-field-caret-color($color);
+    @include mdc-text-field-focused-outline-color($color)
+    @include mdc-text-field-hover-outline-color($color)
+    @include mdc-text-field-outline-color($color)
+  }
+
+  .mdc-button {
+    @include mdc-button-filled-accessible(#ffffff);
+  }
+
+  form {
+    @media (min-width:1024px) {
+      display:flex;
+      .mdc-text-field {margin-right:1em; width:auto;}
+      .mdc-button {height:48px;}
+    }
+  }
+}
+
+.createTask,
+.ListTasks {
+  .mdc-list-item__text {
+    flex:1;
+    label {display:block;}
+    input {width:100%;}
+  }
+}
+
+.createTask {
+
+}
+
+.listTasks {
+  .mdc-list-item {
+    .mdc-list-item__meta .mdc-icon-button:first-child {visibility:hidden;}
+
+    &:hover .mdc-list-item__meta .mdc-icon-button:first-child {visibility:visible;}
+  }
+
+  .mdc-list-item__text.done {text-decoration:line-through;}
+
+  .mdc-list-item__meta {white-space:nowrap;}
+}
+
+.editTask {
+  padding:0 16px;
+
+  .mdc-text-field {margin-bottom:1em;}
+}

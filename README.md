@@ -1,3 +1,18 @@
+## dev
+
+Requirements:
+- `mongod`
+
+```sh
+npm install
+mongod & node ./node_modules/todolistapi/bin/www &
+npm start
+```
+
+
+
+--
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
