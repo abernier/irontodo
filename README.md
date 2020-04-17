@@ -1,3 +1,5 @@
+![](https://s3-us-west-2.amazonaws.com/s.cdpn.io/67030/screenshot.png)
+
 ## INSTALL
 
 Requirements:
